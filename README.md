@@ -14,7 +14,7 @@ Here are all our ansible roles for installing git server.
 ## Using this Collection
 You can install the collection using ansible-galaxy by running:
 ```bash
-ansible-galaxy collection install l3d.time:1.0.3
+ansible-galaxy collection install l3d.time:1.0.4
 ```
 
 Remember you can to Upgrade to the latest version of the l3d.time collection using the ``--upgrade`` parameter:
@@ -43,7 +43,7 @@ You can also list a collection in ``requirements.yml``:
 ---
 collections:
   - name: l3d.time
-    version: ">=1.0.3"
+    version: ">=1.0.4"
 ```
 
 ## Include roles in your playbook
