@@ -1,0 +1,18 @@
+---
+timedatectl__timeservers:
+ - ptbtime1.ptb.de
+ - ptbtime2.ptb.de
+ - ptbtime3.ptb.de
+ - 0.pool.ntp.org
+ - 1.pool.ntp.org
+ - 2.pool.ntp.org
+ - 3.pool.ntp.org
+
+timedatectl__RootDistanceMaxSec: '5'
+timedatectl__PollIntervalMinSec: '32'
+timedatectl__PollIntervalMaxSec: '2048'
+timedatectl__ConnectionRetrySec: '30'
+timedatectl__SaveIntervalSec: '60'
+
+# version check for this playbook (true is recomended)
+submodules_versioncheck: false

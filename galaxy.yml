@@ -9,7 +9,7 @@ namespace: l3d
 name: time
 
 # The version of the collection. Must be compatible with semantic versioning
-version: 1.0.6
+version: 1.1.0
 
 # The path to the Markdown (.md) readme file. This path is relative to the root of the collection
 readme: README.md
@@ -41,7 +41,7 @@ tags:
 # L(specifiers,https://python-semanticversion.readthedocs.io/en/latest/#requirement-specification). Multiple version
 # range specifiers can be set and are separated by ','
 dependencies:
-  "community.general": ">=12.0.0,<13.0.0"
+  "community.general": ">=12.3.0"
 
 # The URL of the originating SCM repository
 repository: https://github.com/roles-ansible/ansible_collection_time.git
