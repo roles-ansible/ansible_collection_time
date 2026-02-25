@@ -22,6 +22,10 @@ Ansible role to configure timedatectl on linux.
 | `timedatectl__ConnectionRetrySec` | `30` |
 | `timedatectl__SaveIntervalSec` | `60` |
 
+## Requirements
+
++ ``community.general``
+
 ## Author
 
 + L3D <l3d@c3woc.de>
