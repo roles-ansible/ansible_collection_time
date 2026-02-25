@@ -1,0 +1,8 @@
+---
+- name: Restart systemd-timesyncd
+  listen: 'systemctl restart systemd-timesyncd'
+  become: true
+  ansible.builtin.systemd_service:
+    name: 'systemd-timesyncd'
+    state: 'started'
+  when: ansible_facts['service_mgr'] == "systemd"

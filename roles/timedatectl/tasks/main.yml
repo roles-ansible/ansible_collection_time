@@ -1,22 +1,19 @@
 ---
 - name: Optionally run versionscheck if enabled
   ansible.builtin.include_tasks:
-    file: versioncheck.yml
+    file: 'versioncheck.yml'
   when: submodules_versioncheck | bool
 
-- name: Include OS specific variables.
-  ansible.builtin.include_vars:
-    file: "{{ lookup('first_found', ntp__vars) }}"
-
-- name: Install ntp
+- name: Configure /etc/systemd/timesyncd.conf
   ansible.builtin.include_tasks:
-    file: "{{ lookup('first_found', ntp__install) }}"
+    file: 'timesyncd.yml'
+  when: ansible_facts['service_mgr'] == "systemd"
 
-- name: Configure ntp
+- name: Set timezone and install tzdata
   ansible.builtin.include_tasks:
-    file: config.yml
+    file: 'timezone.yml'
 
-- name: Optionally set NTP Timezone
+- name: make sure systemd-timesyncd is started
   ansible.builtin.include_tasks:
-    file: set_time_zone.yml
-  when: ntp_set_time_zone | bool
+    file: 'systemd-timesyncd.yml'
+  when: ansible_facts['service_mgr'] == "systemd"
