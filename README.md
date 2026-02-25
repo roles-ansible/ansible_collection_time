@@ -10,11 +10,12 @@ Here are all our ansible roles for installing git server.
 
 ## Ansible Roles in l3d.time
 - [![l3d.time.ntp](https://ansible.l3d.space/svg/l3d.time.ntp_ansible-role.svg)](https://github.com/roles-ansible/ansible_role_ntp.git) - Ansible role to install and configure the Network Time Protocol (NTP) Daemon.
+- [l3d.time.timedatectl](https://github.com/roles-ansible/ansible_collection_time/tree/main/roles/timedatectl) – Ansible role to install and configure timedatectl
 
 ## Using this Collection
 You can install the collection using ansible-galaxy by running:
 ```bash
-ansible-galaxy collection install l3d.time:1.0.6
+ansible-galaxy collection install l3d.time:1.1.0
 ```
 
 Remember you can to Upgrade to the latest version of the l3d.time collection using the ``--upgrade`` parameter:
@@ -43,7 +44,7 @@ You can also list a collection in ``requirements.yml``:
 ---
 collections:
   - name: l3d.time
-    version: ">=1.0.6"
+    version: ">=1.1.0"
 ```
 
 ## Include roles in your playbook

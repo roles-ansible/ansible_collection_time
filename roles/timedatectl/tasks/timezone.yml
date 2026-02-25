@@ -1,0 +1,21 @@
+---
+- name: "Set timezone to {{ timedatectl__timezone }}"
+  become: true
+  community.general.timezone:
+    name: "{{ timedatectl__timezone }}"
+  notify: 'systemctl restart systemd-timesyncd'
+
+- name: Update apt cache
+  become: true
+  ansible.builtin.apt:
+    cache_valid_time: 3600
+    update_cache: true
+  when:
+    - ansible_facts['pkg_mgr'] == "apt"
+
+- name: Install tzdata
+  become: true
+  ansible.builtin.package:
+    name: 'tzdata'
+    state: present
+  notify: 'systemctl restart systemd-timesyncd'
