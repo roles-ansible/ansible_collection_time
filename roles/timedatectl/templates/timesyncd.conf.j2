@@ -18,10 +18,10 @@
 # See timesyncd.conf(5) for details.
 
 [Time]
-NTP={% for server in timedatectl__timeservers %} {{ server}} {% endfor %}
-FallbackNTP={% for fallback_server in timedatectl__timeservers_fallback %} {{ fallback_server}} {% endfor %}
-RootDistanceMaxSec={{ timedatectl__RootDistanceMaxSec }}
-PollIntervalMinSec={{ timedatectl__PollIntervalMinSec }}
-PollIntervalMaxSec={{ timedatectl__PollIntervalMaxSec }}
-ConnectionRetrySec={{ timedatectl__ConnectionRetrySec }}
-SaveIntervalSec={{ timedatectl__SaveIntervalSec }}
+NTP={{ timedatectl__timeservers | join(' ') }}
+FallbackNTP={{ timedatectl__timeservers_fallback | join(' ') }}
+RootDistanceMaxSec={{ timedatectl__rootdistancemaxsec }}
+PollIntervalMinSec={{ timedatectl__pollintervalminsec }}
+PollIntervalMaxSec={{ timedatectl__pollintervalmaxsec }}
+ConnectionRetrySec={{ timedatectl__connectionretrysec }}
+SaveIntervalSec={{ timedatectl__saveintervalsec }}

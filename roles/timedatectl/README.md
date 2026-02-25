@@ -16,11 +16,11 @@ Ansible role to configure timedatectl on linux.
 | --- | --- |
 | `timedatectl__timezone` | `Europe/Busingen` |
 | `timedatectl__timeservers` | *see [defaults/main.yml](defaults/main.yml)*
-| `timedatectl__RootDistanceMaxSec` | `5` |
-| `timedatectl__PollIntervalMinSec` | `32` |
-| `timedatectl__PollIntervalMaxSec` | `2048` |
-| `timedatectl__ConnectionRetrySec` | `30` |
-| `timedatectl__SaveIntervalSec` | `60` |
+| `timedatectl__rootdistancemaxsec` | `5` |
+| `timedatectl__pollintervalminsec` | `32` |
+| `timedatectl__pollintervalmaxsec` | `2048` |
+| `timedatectl__connectionretrysec` | `30` |
+| `timedatectl__saveintervalsec` | `60` |
 
 ## Requirements
 
