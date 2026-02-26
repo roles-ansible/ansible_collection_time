@@ -6,7 +6,6 @@
 ============================
 
 This is the Ansible Collection ``l3d.time``. A collection for our time manupulating ansible roles.
-Here are all our ansible roles for installing git server.
 
 ## Ansible Roles in l3d.time
 - [![l3d.time.ntp](https://ansible.l3d.space/svg/l3d.time.ntp_ansible-role.svg)](https://github.com/roles-ansible/ansible_role_ntp.git) - Ansible role to install and configure the Network Time Protocol (NTP) Daemon.
